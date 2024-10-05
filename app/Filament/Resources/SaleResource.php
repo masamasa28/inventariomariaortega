@@ -84,6 +84,7 @@ public static function table(Table $table): Table
             //
         ];
     }
+    
 
     public static function getPages(): array
     {
