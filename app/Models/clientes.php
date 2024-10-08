@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class clientes extends Model
 {
@@ -15,4 +16,7 @@ class clientes extends Model
         'email',
         'telefono',
     ];
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
 }

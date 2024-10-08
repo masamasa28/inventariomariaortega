@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class compra extends Model
 {
@@ -29,4 +30,9 @@ class compra extends Model
  {
      return $this->belongsTo(productos::class);
  }
+
+ use SoftDeletes;
+
+ protected $dates = ['deleted_at'];
+ 
 }
