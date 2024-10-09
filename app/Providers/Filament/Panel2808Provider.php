@@ -26,9 +26,9 @@ class Panel2808Provider extends PanelProvider
         return $panel
             ->id('2808')
             ->path('2808')
-            ->colors([
+            /*->colors([
                 'primary' => Color::Amber,
-            ])
+            ])*/
             ->discoverResources(in: app_path('Filament/2808/Resources'), for: 'App\\Filament\\2808\\Resources')
             ->discoverPages(in: app_path('Filament/2808/Pages'), for: 'App\\Filament\\2808\\Pages')
             ->pages([

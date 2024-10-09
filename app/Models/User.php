@@ -20,6 +20,8 @@ class User extends Authenticatable
     use TwoFactorAuthenticatable;
     use HasRoles;
 
+    use HasApiTokens, HasFactory, HasProfilePhoto, Notifiable, HasRoles;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -60,5 +62,4 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
-    
 }

@@ -20,7 +20,7 @@
             @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
+                        <a href="{{ url('dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">dashboard</a>
                     @else
                         <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
 
@@ -30,7 +30,32 @@
                     @endauth
                 </div>
             @endif
+            @auth
+            <a href="/admin" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex flex-col items-center justify-center motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500 text-center">
+                <div class="flex flex-col items-center">
+                    <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-8 h-8 stroke-red-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18v6H3V3z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 9v10c0 .553.447 1 1 1h12c.553 0 1-.447 1-1V9H5z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 9h14v1H5V9z" />
+                        </svg>
+                    </div>
+                
+                    <h2 class="mt-4 text-3xl font-semibold text-gray-900 dark:text-white">Inventarios Malutesoros</h2>
+                </div>
+            
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6 mt-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                </svg>
+            </a>
+        @endauth
 
+        <div class="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-gray-900 text-center">
+            <!-- Título centrado y grande -->
+            <h2 class="text-10xl font-bold text-gray-900 dark:text-white mb-6">Inventarios Malutesoros</h2>
+        </div>
+
+            <!--
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
                 <div class="flex justify-center">
                     <svg viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto bg-gray-100 dark:bg-gray-900">
@@ -99,6 +124,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
                         </a>
+                        
 
                         <div class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                             <div>
@@ -115,10 +141,11 @@
                                 </p>
                             </div>
                         </div>
+                        
                     </div>
-                </div>
+                </div> -->
 
-                <div class="flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
+             <!--   <div class="flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
                     <div class="text-center text-sm sm:text-left">
                         &nbsp;
                     </div>
@@ -126,8 +153,14 @@
                     <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>
-                </div>
+                </div>  
             </div>
+-->
         </div>
+        <footer class="bg-white shadow mt-6 p-4">
+            <div class="text-center">
+                <p class="text-gray-600">&copy; 2024 Inventarios Malutesoros. All rights reserved.</p>
+            </div>
+        </footer>
     </body>
 </html>
