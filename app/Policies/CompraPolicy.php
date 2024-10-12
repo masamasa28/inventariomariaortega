@@ -45,7 +45,7 @@ class CompraPolicy
      */
     public function delete(User $user, compra $compra): bool
     {
-        return $user->hasAnyRole(['Admin', 'ProveeCompraAdmi','Gerente']);
+        return $user->hasAnyRole(['Admin']);
     }
 
     /**

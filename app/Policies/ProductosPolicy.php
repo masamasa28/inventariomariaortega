@@ -45,7 +45,7 @@ class ProductosPolicy
      */
     public function delete(User $user, productos $productos): bool
     {
-        return $user->hasAnyRole(['Admin', 'InventarioAdmi','Gerente']);
+        return $user->hasAnyRole(['Admin','Gerente']);
     }
 
     /**

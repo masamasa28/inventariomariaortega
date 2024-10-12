@@ -45,7 +45,7 @@ class ClientesPolicy
      */
     public function delete(User $user, Clientes $clientes): bool
     {
-        return $user->hasAnyRole(['Admin', 'VenderAdmin','Gerente']);
+        return $user->hasAnyRole(['Admin']);
     }
 
     /**

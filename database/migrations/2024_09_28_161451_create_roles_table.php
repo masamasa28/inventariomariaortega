@@ -11,7 +11,6 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // Verificar si la tabla 'roles' ya existe
         if (!Schema::hasTable('roles')) {
             Schema::create('roles', function (Blueprint $table) {
                 $table->id();

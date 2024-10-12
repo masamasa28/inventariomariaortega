@@ -66,14 +66,18 @@ public static function table(Table $table): Table
         ])
         ->filters([
             // Puedes agregar filtros aquí si es necesario
+            Tables\Filters\TrashedFilter::make(),
         ])
         ->actions([
             Tables\Actions\EditAction::make(),
+            Tables\Actions\ForceDeleteAction::make(), // Eliminar permanentemente
+                Tables\Actions\RestoreAction::make(), // Restaurar registros eliminados
+                Tables\Actions\DeleteAction::make(),
         ])
         ->bulkActions([
-            Tables\Actions\BulkActionGroup::make([
+            /*Tables\Actions\BulkActionGroup::make([
                 Tables\Actions\DeleteBulkAction::make(),
-            ]),
+            ]),*/
         ]);
 }
 

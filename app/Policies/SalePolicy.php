@@ -47,7 +47,7 @@ class SalePolicy
      */
     public function delete(User $user, Sale $sale): bool
     {
-        return $user->hasAnyRole(['Admin', 'VenderAdmin','Gerente']);
+        return $user->hasAnyRole(['Admin']);
 
     }
 
